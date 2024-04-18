@@ -1,7 +1,9 @@
 import torch
 from sentence_transformers import SentenceTransformer, util
 import os
+import PyPDF2
 from openai import OpenAI
+import fitz
 
 # ANSI escape codes for colors
 PINK = '\033[95m'
@@ -14,6 +16,7 @@ RESET_COLOR = '\033[0m'
 client = OpenAI(
     base_url='http://localhost:11434/v1',
     api_key='mistral'
+    # api_key=os.getenv('OPENAI_API_KEY', 'default_key_if_none')
 )
 
 # Function to open a file and return its contents as a string
@@ -22,7 +25,7 @@ def open_file(filepath):
         return infile.read()
 
 # Function to get relevant context from the vault based on user input
-def get_relevant_context(user_input, vault_embeddings, vault_content, model, top_k=3):
+def get_relevant_context(user_input, vault_embeddings, vault_content, model, top_k=2):
     if vault_embeddings.nelement() == 0:  # Check if the tensor has any elements
         return []
     # Encode the user input

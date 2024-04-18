@@ -1,0 +1,4 @@
+.env
+envLocalRag/
+localrag.py
+upload.py

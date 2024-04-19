@@ -16,11 +16,14 @@ To get started with RAG-SentenceTransformerDocChat, clone this repository and in
 git clone https://github.com/yourusername/RAG-SentenceTransformerDocChat.git
 cd RAG-SentenceTransformerDocChat
 pip install -r requirements.txt
+```
+
 
 ## Usage
 To run the application, execute the following command:
 ```bash
 python app.py
+```
 
 Navigate to http://localhost:7860 to access the Gradio interface where you can upload documents and ask questions based on their content.
 

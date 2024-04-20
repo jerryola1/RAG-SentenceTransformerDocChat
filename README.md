@@ -13,7 +13,7 @@ RAG-SentenceTransformerDocChat is a document-based chatbot application that leve
 To get started with RAG-SentenceTransformerDocChat, clone this repository and install the required dependencies:
 
 ```bash
-git clone https://github.com/yourusername/RAG-SentenceTransformerDocChat.git
+git clone https://github.com/jerryola1/RAG-SentenceTransformerDocChat.git
 cd RAG-SentenceTransformerDocChat
 pip install -r requirements.txt
 ```
